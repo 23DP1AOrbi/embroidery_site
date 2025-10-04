@@ -21,7 +21,14 @@
   <nav id="links">
     <a href="#home" onclick="removeNav()">Home</a>
     <a href="#about" onclick="removeNav()">About</a>
-    <a href="#functions" onclick="removeNav()">Functions</a>
+    <div class="drop-down">
+      <a href="#functions" onclick="removeNav()">Functions</a>
+      <div class="drop-down-content">
+        <a href="#custom" onclick="removeNav()">Personalizēti pēc pasūtījuma</a>
+        <a href="#remote-creation" onclick="removeNav()">Dizaina veidotājs tiešsaistē</a>
+        <a href="#creation-choice" onclick="removeNav()">Izveides izvēle</a>
+      </div>
+    </div>
     <a href="#contact" onclick="removeNav()">Contact</a>
   </nav>
 </header>
@@ -47,7 +54,7 @@
     <section id="functions">
        <h2>Functions</h2>
         <div class="card-container">
-        <div class="card">
+        <div class="card" id="custom">
             <div class="card-content">
                 <img src="src/img/custom.jpg">
                 <h1>Personalizēti pēc pasūtījuma</h1>
@@ -58,7 +65,7 @@
                 <a class="btn" href="#custom">Learn more</a>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="remote-creation">
             <div class="card-content">
                 <img src="src/img/laptop.jpg">
                 <h1>Dizaina veidotājs tiešsaistē</h1>
@@ -67,16 +74,16 @@
                 <a class="btn" href="#remote-creation">Learn more</a>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="creation-choice">
             <div class="card-content">
                 <img src="src/img/kit.jpg">
-                <h1>Izveides izvēle/h1>
+                <h1>Izveides izvēle</h1>
                 <p>Izveido savu unikālo izšuvumu komplektu – izvēlies veidot pēc kontūras vai pēc rūtiņām,
                    pievieno personalizētus dizainus
                   un saņem visu gatavu ērtai pasūtīšanai vai lejuplādei. Lieliski piemērots dāvanu komplektiem.
                    Vari pievienot logotipus, vārdus, simbolus un krāsas, lai viss
                     būtu tieši tā, kā vēlies.</p>
-                <a class="btn" href="#custom-kit">Learn more</a>
+                <a class="btn" href="#creation-choice">Learn more</a>
             </div>
           </div>
       </div>

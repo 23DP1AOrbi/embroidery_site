@@ -32,14 +32,49 @@ header {
 nav {
     display: flex;
     gap: 5vw;
+    align-items: center;
 }
 
-nav > a {
+nav > a, .drop-down > a {
     text-decoration: none;
     color: rgb(154, 99, 206);  
+    position: relative;
+    display: inline-block;
 }
 
-nav > a:hover {
+.drop-down {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-down-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(154, 99, 206);
+  min-width: 200px;
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.25);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.drop-down-content a {
+  color: rgb(39, 14, 74);;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.drop-down:hover .drop-down-content {
+  display: block;
+}
+
+.drop-down-content a:hover {
+  background-color: rgb(135, 80, 187);
+  border-radius: 4px;
+}
+
+nav > a:hover, .drop-down > a:hover {
     color: rgb(204, 142, 237);
 }
 
@@ -160,6 +195,10 @@ section > h2 {
     margin-bottom: 50px;
     font-size: 40px;
     color: rgb(141, 74, 204);
+}
+
+.card {
+    scroll-margin-top: 100px;
 }
 
 .card-container {
@@ -501,6 +540,8 @@ footer {
     }
 }
 
+/* Light Mode */
+
 body.light-mode .mode-icon {
   fill: rgb(39, 14, 74);
 }
@@ -526,14 +567,37 @@ body.light-mode header {
   color: rgb(56, 23, 103);
 }
 
-body.light-mode nav > a {
+body.light-mode nav > a ,body.light-mode .drop-down > a {
   color: rgb(56, 23, 103);
   transition: text-decoration 1s ease-in-out;
 }
 
-body.light-mode nav > a:hover {
+body.light-mode nav > a:hover, body.light-mode .drop-down > a:hover {
   color: rgb(32, 11, 62);
   text-decoration: underline;
+}
+
+body.light-mode .drop-down-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(56, 23, 103);
+  min-width: 200px;
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.25);
+  z-index: 1;
+  flex-direction: column;
+}
+
+body.light-mode .drop-down-content a {
+  color: rgb(154, 99, 206);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+body.light-mode .drop-down-content a:hover {
+  background-color: rgb(78, 31, 145);
+  border-radius: 4px;
 }
 
 body.light-mode .about {
