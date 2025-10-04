@@ -1,0 +1,615 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(56, 23, 103);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.mode-icon {
+    fill: rgb(154, 99, 206);
+    transition: fill 0.3s ease;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(39, 14, 74);
+    font-size: 20px;
+    color: rgb(154, 99, 206);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    gap: 5vw;
+}
+
+nav > a {
+    text-decoration: none;
+    color: rgb(154, 99, 206);  
+}
+
+nav > a:hover {
+    color: rgb(204, 142, 237);
+}
+
+#hamb {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-image: 
+    linear-gradient(rgba(56, 23, 103, 0.7)),
+    url("/src/img/pexels-pixabay-301703.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-text  {
+    font-size: 2rem;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    margin-top: 180px;
+    margin-left: 100px;
+    color: rgb(194, 142, 243); 
+    height: 80vh;
+    scroll-margin-top: 200px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  height: 700px;
+  color: rgb(194, 142, 243);
+  font-size: 20px;
+}
+
+.header-text > h1, .header-text > h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.about-container {
+    background-color: rgb(56, 23, 103);
+}
+
+.about-content {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    gap: 80px;
+}
+
+.about > p {
+    width: 80%;
+}
+
+aside {
+    border-radius: 10px;
+    background-color: rgb(194, 142, 243);
+    padding: 20px;
+    color: rgb(56, 23, 103);
+    font-size: 22px;
+}
+
+aside:hover img{
+    transform: scale(1.8);
+}
+
+aside > img {
+    width: 20vw;
+    margin-bottom: 32px;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+
+#ember {
+    color: rgb(56, 23, 103);
+}
+
+#ember:active {
+    color: rgb(93, 29, 182);
+}
+
+section {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(39, 14, 74);
+    background-color: rgb(56, 23, 103);
+    padding: 40px;
+    padding-bottom: 20px;
+    width: fit-content;
+    border-radius: 20px;
+    scroll-margin-top: 20px;
+}
+
+section > h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: rgb(141, 74, 204);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    border: none;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 200px;
+    max-width: 250px;
+    height: 450px;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    color: rgb(39, 14, 74);
+    font-size: 14px;
+    text-align: justify;
+    transition: ease-in-out transform 0.7s,  font-size 1s;
+    transform: scale(1);
+    position: relative;
+    animation: colormove 5s infinite ease-in-out;
+    animation-delay: -3s;
+}
+
+.card-content > img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.card-content > h1 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 15px;  
+    transition: ease-in-out font-size 0.5s;
+}
+
+.card-content > p {
+    margin-top: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: rgb(206, 158, 252);
+    padding: 10px 20px;
+    border-radius: 18px;
+    color: rgb(39, 14, 74);
+    font-size: 15px;
+    position: absolute;
+    bottom: 25px;
+    transition: ease-in-out font-size 1s, background-color 0.5s, color 0.5s;
+}
+
+.btn:hover {
+    color: rgb(174, 109, 234);
+    background-color: rgb(39, 14, 74);
+}
+
+.card-content:hover {
+    transform: scale(1.2);
+    font-size: 15px;
+}
+
+.card-content:hover .btn {
+    font-size: 18px;
+}
+
+.card-content:hover h1 {
+    font-size: 24px;
+}
+
+@keyframes colormove {
+    0% {
+        background-color: rgb(118, 40, 192);
+    }
+    50% {
+        background-color: rgb(174, 109, 234);
+    }
+    75% {
+        background-color: rgb(141, 74, 204);
+    }
+    100% {
+        background-color: rgb(118, 40, 192);
+    }
+}
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: none;
+    fill: rgb(194, 142, 243);
+    transition: fill 0.3s;
+}
+
+.facebook:hover {
+    fill:  #0165E1;
+}
+
+.insta:hover {
+    fill: #C13584;
+}
+
+.twt:hover {
+    fill: #1D9BF0;
+}
+
+.facebook:active {
+    fill: #054aa0;
+    transition: none;
+}
+
+.insta:active {
+    fill: #92195e;
+    transition: none;
+}
+
+.twt:active {
+    fill: #076eb3;
+    transition: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: rgb(154, 99, 206);
+    height: 200px;
+    background-color: rgb(39, 14, 74);
+}
+
+@media screen and (max-width:900px) {
+
+    header {
+        font-size: 22px;
+    }
+
+    nav > a:hover {
+        animation: navcolor infinite 1.5s;
+        color: rgb(154, 99, 206);
+        background-color: transparent
+    }
+
+    @keyframes navcolor {
+        0% {
+            color: rgb(201, 170, 229);
+        }
+        50% {
+            color: rgb(154, 99, 206);
+        }
+        100% {
+            color: rgb(196, 153, 235);
+        }
+    }
+
+    body.light-mode nav > a:hover {
+        animation: lightnavcolor infinite 1.5s;
+        background-color: transparent
+    }
+
+    @keyframes lightnavcolor {
+        0% {
+            color: rgb(52, 2, 78);
+        }
+        50% {
+            color: rgb(18, 1, 43);
+        }
+        100% {
+            color: rgb(67, 30, 85);
+        }
+    }
+
+    .header-text {
+        width: 60%;
+    }
+    
+    .about > p {
+        width: 100%;
+    }
+
+    aside:hover img{
+        transform: scale(2);
+    }
+
+    section {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        scroll-margin-top: 90px;
+    }
+    
+    .card-content {
+        width: 150px;
+        height: 460px;
+        font-size: 12px;
+    }
+
+    .card-content:hover {
+        font-size: 14px;
+    }
+
+    .card-content > img {
+        width: 150px;
+    }
+
+    .card-content:hover h1 {
+        font-size: 18px;
+    }
+
+    .card-content:hover .btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:720px) {
+
+     #links {
+        display: none;
+        flex-direction: column;
+    }
+
+     #links.active {
+        display: flex;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: start;
+        padding: 10px 20px;
+    }
+
+    nav {
+        text-align: left;
+        justify-content: left;
+    }
+
+    nav > a {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+     #hamb {
+        color: rgb(154, 99, 206);
+        display: contents;
+    }
+    
+     .header-text {
+        width: 90%;
+        margin-left: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        margin-bottom: 0;
+        height: 1000px;
+        font-size: 18px;
+    }
+
+    aside {
+        width: 150px;
+        margin-bottom: 100px;
+        padding: 20px 50px;
+    }
+
+    aside > p {
+        margin-bottom: 0;
+    }
+
+    aside > img {
+        width: 150px;
+    }
+
+    aside:hover > img {
+        transform: scale(2.2);
+    }
+
+    .card-container {
+        flex-direction: column;
+        width: 270px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .card-content {
+        width: 230px;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+
+    .card-content:hover {
+
+        font-size: 16px;
+    }
+
+    .card-content > img {
+        width: 230px;
+    }
+}
+
+
+/* Light Mode */
+
+@keyframes lightcolormove {
+    0% {
+        background-color: rgb(56, 23, 103);
+    }
+    50% {
+        background-color: rgb(47, 13, 95);
+    }
+    75% {
+        background-color: rgb(76, 43, 122);
+    }
+    100% {
+        background-color: rgb(56, 23, 103);
+    }
+}
+
+body.light-mode .mode-icon {
+  fill: rgb(39, 14, 74);
+}
+
+#lightModeToggle {
+    cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+body.light-mode #hamb {
+    color: rgb(56, 23, 103);
+}
+
+body.light-mode {
+  background-color: rgb(154, 99, 206);
+  color: rgb(56, 23, 103);
+}
+
+body.light-mode header {
+  background-color: rgb(154, 99, 206);
+  color: rgb(56, 23, 103);
+}
+
+body.light-mode nav > a {
+  color: rgb(56, 23, 103);
+  transition: text-decoration 1s ease-in-out;
+}
+
+body.light-mode nav > a:hover {
+  color: rgb(32, 11, 62);
+  text-decoration: underline;
+}
+
+body.light-mode .about {
+  color: rgb(56, 23, 103);
+}
+
+body.light-mode .about-container {
+  background-color: rgb(171, 110, 228);
+}
+
+body.light-mode #ember {
+    color: rgb(171, 110, 228);
+}
+
+body.light-mode aside {
+  background-color: rgb(56, 23, 103);
+  color: rgb(171, 110, 228);
+}
+
+body.light-mode section {
+  background-color: rgb(171, 110, 228);
+  color: rgb(56, 23, 103);
+}
+
+body.light-mode section h2 {
+    color: rgb(56, 23, 103);
+}
+
+body.light-mode .card-content {
+  color: rgb(171, 110, 228);
+  animation: lightcolormove 5s infinite ease-in-out;
+}
+
+body.light-mode .btn {
+  background-color: rgb(39, 14, 74);
+  color: rgb(154, 99, 206);
+}
+
+
+body.light-mode .btn:hover {
+    background-color: rgb(171, 110, 228);
+    color: rgb(39, 14, 74);
+}
+
+body.light-mode footer {
+  background-color: rgb(154, 99, 206);
+  color: rgb(56, 23, 103);
+}
+
+body.light-mode .icon {
+  fill: rgb(56, 23, 103);
+}
+
+body.light-mode .facebook:hover {
+    fill:  #0165E1;
+}
+
+body.light-mode .insta:hover {
+    fill: #C13584;
+}
+
+body.light-mode .twt:hover {
+    fill: #1D9BF0;
+}
+
+body.light-mode .facebook:active {
+    fill: #054aa0;
+    transition: none;
+}
+
+body.light-mode .insta:active {
+    fill: #92195e;
+    transition: none;
+}
+
+body.light-mode .twt:active {
+    fill: #076eb3;
+    transition: none;
+}
