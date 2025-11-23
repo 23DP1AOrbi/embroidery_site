@@ -9,7 +9,9 @@
 <body>
     <div class="search">
         <input type="text" id="search-input" placeholder="Search for food...">
-        <!-- <button id="search-btn">Search</button> -->
+        <p class="sort">A-Z</p>
+        <p class="sort">Z-A</p>
+        <p class="sort">None</p>
     </div>
     <section id="cards-container">
     <!-- <div class="card">
@@ -25,6 +27,20 @@
         </div>
     </div> -->
     </section>
+    
+    <div class="form">
+        <h2>Contacts Us</h2>
+        <label id="user-label" class="label">Username</label>
+            <input id="username" type="text">
+        <label id="email-label" class="label">E-mail</label>
+            <input id="email" type="text">
+        <label id="message-label" class="label">Message</label>
+            <textarea id="message"></textarea>
+        <div class="warning">
+            <h2 id="war-message"></h2>
+        </div>
+        <button class="btn" id="submit" type="submit">Submit</button>
+    </div>
     <script src="src/js/cards.js"></script>
 </body>
 </html>
