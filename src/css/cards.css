@@ -14,6 +14,11 @@ section {
     flex-wrap:wrap;
 }
 
+.sort-btn {
+    display: flex;
+    gap: 10px;
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
@@ -28,19 +33,12 @@ section {
     color: rgb(81, 42, 0);
     font-size: 16px;
     text-align: justify;
-    /* transition: ease-in-out width 1s, height 1s, font-size 1s; */
     transition: ease-in-out transform 0.35s;
     transform: scale(1);
     position: relative;
     animation: colormove 5s infinite ease-in-out;
     animation-delay: -3s;
 }
-/* 
-.card-content > img {
-    width: 200px;
-    border-radius: 10px;
-    transition: ease-in-out width 1s;
-} */
 
 h1 {
     font-size: 20px;
@@ -66,20 +64,11 @@ p {
 .btn:hover {
     color: rgb(255, 202, 110);
     background-color: rgb(56, 26, 1);
+    cursor: pointer;
 }
 
 .card-content:hover {
-    /* width: 300px; */
-    /* font-size: 18px; */
     transform: scale(1.3);
-}
-
-.card-content:hover .btn {
-    /* font-size: 20px; */
-}
-
-.card-content:hover h1 {
-    /* font-size: 26px; */
 }
 
 @keyframes colormove {
@@ -144,7 +133,7 @@ p {
 }
 
 
-/* form  */
+/* form formatting  */
 
 .form {
     display: flex;
@@ -164,17 +153,35 @@ p {
     text-align: center;
     margin: 0;
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .form > input {
     padding: 10px;
-    /* margin: 8px 0; */
+}
+
+.form > input, .form > textarea {
+    border: solid 2px rgb(104, 54, 1);
+    border-radius: 2px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form > input:hover, .form > textarea:hover {
+    animation: colormove 0.5s infinite;
+    opacity: 0.8;
+}
+
+.form > input:focus, .form > textarea:focus {
+    opacity: 1;
+    animation: none;
+    box-shadow: 0 0 8px rgb(157, 83, 5);
 }
 
 .form > label {
     margin: 8px 0;
     font-size: 20px;
+    /* transition: text-decoration 0.5s linear; */
 }
 
 textarea {
@@ -188,12 +195,43 @@ textarea {
 }
 
 .warning {
+    margin-top: 5px;
     text-align: center;
-    color: rgb(212, 6, 6);
+    color: rgb(249, 5, 5);
+    width: 100%;
+    height: 100%;
+    background-color: rgb(104, 54, 1);
+    border-radius: 2px;
 }
 
 .warning > h2 {
     font-size: 16px;
     margin: 0;
-    /* padding: 10px; */
+}
+
+
+@media screen and (max-width:515px) {
+
+    #search-input {
+        width: 90%;
+        height: 28px;
+        font-size: 20px;
+    }
+
+    .search {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sort {
+        font-size: 20px;
+    }
+
+    .card-container {
+        font-size: 20px;
+    }
+
+    .form {
+        width: 80%;
+    }
 }
